@@ -3,4 +3,3 @@ bs4==0.0.1
 requests>=2.20.0
 tldextract==2.2.2
 pyppeteer==0.2.2
-smtplib
