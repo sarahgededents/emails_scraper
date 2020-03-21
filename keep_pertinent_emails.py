@@ -5,7 +5,10 @@ from utils import *
 REGEX = r"""[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+\.[a-zA-Z]+(\.[a-zA-Z]+)?"""
 
 def is_email_valid(email):
-    return re.fullmatch(REGEX, email) and ('admission' not in email or 'admissions' not in email or 'alumni' not in email)
+    return re.fullmatch(REGEX, email) \
+        and 'admission' not in email \
+        and 'alumni' not in email \
+        and email.rsplit('.', 1)[-1] not in { 'png', 'jpg', 'jpeg', 'pdf', 'mp4', 'webm', 'mpeg', 'html' }
 
 def sort_emails(file='retrieved_emails.csv', new_file='emails2.csv'):
     with open(file, 'r', encoding='utf-8', newline='') as f:
