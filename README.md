@@ -8,4 +8,4 @@ To finish, your sort emails with elements you want to keep.
 
 It will take about a week to process the code.
 
-You just have to do : python3 Main.py
+You just have to do : `python3 Main.py`
